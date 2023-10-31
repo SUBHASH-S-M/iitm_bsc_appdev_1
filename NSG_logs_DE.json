@@ -1,0 +1,119 @@
+[
+  {
+    "time": "2023-10-31T15:45:00.0000000Z",
+    "systemId": "12345678-abcd-1234-efgh-9876543210ab",
+    "category": "NetworkSecurityGroupFlowEvent",
+    "resourceId": "/SUBSCRIPTIONS/11111111-2222-3333-4444-555555555555/RESOURCEGROUPS/MyResourceGroup/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/MyNSG",
+    "operationName": "NetworkSecurityGroupFlowEvents",
+    "properties": {
+      "Version": 1,
+      "flows": [
+        {
+          "rule": "Allow-HTTP",
+          "flows": [
+            {
+              "mac": "00:1A:2B:3C:4D:5E",
+              "flowTuples": [
+                "1635703500,10.0.0.2,192.168.0.1,5000,80,T,O,A",
+                "1635703520,10.0.0.3,192.168.0.2,6000,80,T,I,D"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "time": "2023-10-31T15:47:00.0000000Z",
+    "systemId": "87654321-dcba-4321-hgfe-5678901234dc",
+    "category": "NetworkSecurityGroupFlowEvent",
+    "resourceId": "/SUBSCRIPTIONS/55555555-4444-3333-2222-111111111111/RESOURCEGROUPS/AnotherResourceGroup/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/AnotherNSG",
+    "operationName": "NetworkSecurityGroupFlowEvents",
+    "properties": {
+      "Version": 1,
+      "flows": [
+        {
+          "rule": "Deny-SSH",
+          "flows": [
+            {
+              "mac": "00:5F:6A:7B:8C:9D",
+              "flowTuples": [
+                "1635703600,10.0.0.4,192.168.0.3,22,22,T,I,D"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "time": "2023-10-31T16:00:00.0000000Z",
+    "systemId": "98765432-abcd-5678-efgh-1234567890ab",
+    "category": "NetworkSecurityGroupFlowEvent",
+    "resourceId": "/SUBSCRIPTIONS/33333333-2222-1111-4444-555555555555/RESOURCEGROUPS/YetAnotherResourceGroup/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/YetAnotherNSG",
+    "operationName": "NetworkSecurityGroupFlowEvents",
+    "properties": {
+      "Version": 1,
+      "flows": [
+        {
+          "rule": "Allow-RDP",
+          "flows": [
+            {
+              "mac": "00:A1:B2:C3:D4:E5",
+              "flowTuples": [
+                "1635703800,10.0.0.5,192.168.0.4,3389,3389,T,O,A"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "time": "2023-10-31T16:15:00.0000000Z",
+    "systemId": "54321678-efgh-1234-abcd-0987654321dc",
+    "category": "NetworkSecurityGroupFlowEvent",
+    "resourceId": "/SUBSCRIPTIONS/66666666-7777-8888-9999-101010101010/RESOURCEGROUPS/NSGDemo/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/MyDemoNSG",
+    "operationName": "NetworkSecurityGroupFlowEvents",
+    "properties": {
+      "Version": 1,
+      "flows": [
+        {
+          "rule": "DefaultRule_AllowAll",
+          "flows": [
+            {
+              "mac": "00:1B:2C:3D:4E:5F",
+              "flowTuples": [
+                "1635704000,10.0.0.6,192.168.0.5,12345,54321,T,I,D"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "time": "2023-10-31T16:30:00.0000000Z",
+    "systemId": "34567890-dcba-4321-efgh-9876543210dc",
+    "category": "NetworkSecurityGroupFlowEvent",
+    "resourceId": "/SUBSCRIPTIONS/88888888-9999-7777-6666-555555555555/RESOURCEGROUPS/TestGroup/PROVIDERS/MICROSOFT.NETWORK/NETWORKSECURITYGROUPS/TestNSG",
+    "operationName": "NetworkSecurityGroupFlowEvents",
+    "properties": {
+      "Version": 1,
+      "flows": [
+        {
+          "rule": "UserRule_CustomRule",
+          "flows": [
+            {
+              "mac": "00:2A:3B:4C:5D:6E",
+              "flowTuples": [
+                "1635704200,10.0.0.7,192.168.0.6,8080,80,T,O,A",
+                "1635704220,10.0.0.8,192.168.0.7,443,443,T,I,D"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
