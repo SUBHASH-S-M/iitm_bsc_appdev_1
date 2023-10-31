@@ -1,0 +1,16 @@
+import org.apache.spark.sql.functions._
+import org.apache.spark.sql.types._
+
+val dynamicTopicName = concat(lit(topicname), lit("-value"))
+
+// Determine the Avro schema dynamically
+val avroSchema = yourKafkaStream.select(schema_of_json(col("value")) as "avroSchema")
+val fields = avroSchema.select(col("avroSchema.fields")).head().getAs[Seq[Row]](0)
+
+// Create a list of field names
+val fieldNames = fields.map(field => field.getAs[String]("name"))
+
+// Use the Avro schema to extract fields and create separate columns
+val df = yourKafkaStream
+  .select(from_avro(col("value"), avroSchema) as "avroData")
+  .select(fieldNames.map(fieldName => col(s"avroData.$fieldName")): _*)
