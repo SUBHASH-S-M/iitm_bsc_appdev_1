@@ -1,0 +1,44 @@
+windows : tumbling , hoping ,sliding ,session
+Distribution types 
+heap table,yet to see
+roundbin,hash,replicated
+
+Star schema 
+type 0,1,2
+scd1,type00--only latest maintain
+scd2,tyoe01-- same record updating 
+scd3,type02 -- history and current
+
+
+
+pin the cluster
+
+
+last,collate,limit
+
+fei
+
+
+flaten heriachy-value is array for a key in json array/map type
+
+Conditional split -
+aggreaget--
+flatten
+alter row
+
+
+Poly base,bulk insert
+
+Lifecycle rules -->json blob settings,prefix match
+
+reference stream ,reference input for stream anlytics job
+
+top 5 longest running queries 
+
+row level security implementation
+
+azure synapse database tempaltes
+
+streaming data modes in pyspark kafka
+
+execut vs read
